@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ReciptsComponent } from './recipts/recipts.component';
-import { RecipteDetailComponent } from './recipts/recipte-detail/recipte-detail.component';
-import { ReciptsItemComponent } from './recipts/recipte-detail/recipts-item/recipts-item.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
@@ -14,15 +16,17 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
   declarations: [
     AppComponent,
     HeaderComponent,
-    ReciptsComponent,
-    RecipteDetailComponent,
-    ReciptsItemComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent,
+    ShoppingEditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
