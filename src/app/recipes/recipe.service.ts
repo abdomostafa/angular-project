@@ -9,7 +9,8 @@ export class RecipeService {
   private recipes = [
     new Recipe('A Test Recipe', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
       [new Ingredient('xxx', 2), new Ingredient('aa', 2)]),
-    new Recipe('B Test Recipe', 'This is simply a test xx', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Burger_King_%40Taiwan_Double_Fish_Burger.jpg/1280px-Burger_King_%40Taiwan_Double_Fish_Burger.jpg',
+    new Recipe('B Test Recipe', 'This is simply a test xx', 'https://upload.wikimedia.org/wikipedia/commons/thumb' +
+      '/6/69/Burger_King_%40Taiwan_Double_Fish_Burger.jpg/1280px-Burger_King_%40Taiwan_Double_Fish_Burger.jpg',
       [new Ingredient('bbb', 2), new Ingredient('ddddd', 2)])
   ];
 
