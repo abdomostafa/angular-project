@@ -24,4 +24,8 @@ export class RecipeService {
   addToshipingList(ingredients: Ingredient[]) {
    this.shoppingService.addIngredients(ingredients);
   }
+
+  getRecipe(id: number) {
+    return this.recipes[id];
+  }
 }

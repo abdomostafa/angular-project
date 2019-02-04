@@ -10,12 +10,17 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
+  private id: number;
 
   constructor(private recipesService: RecipeService, private routerActive: ActivatedRoute) {
   }
 
   ngOnInit() {
     const id = this.routerActive.snapshot.params['id'];
+    this.routerActive.params.subscribe(e => {
+      this.id = +e['id'];
+      this.recipe = this.recipesService.getRecipe(this.id);
+    });
   }
   addToShopList() {
     this.recipesService.addToshipingList(this.recipe.ingredients);
