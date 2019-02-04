@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-recipe-edit',
@@ -6,11 +7,18 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./recipe-edit.component.css']
 })
 export class RecipeEditComponent implements OnInit {
+  id: number;
+  isEditMode = false;
 
-  constructor() {
+  constructor(private activatedRouter: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.activatedRouter.params.subscribe(e => {
+      this.isEditMode = e['id'] != null;
+      this.id = +e['id'];
+      console.log(this.isEditMode);
+    });
   }
 
 }
