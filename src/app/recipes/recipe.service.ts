@@ -5,7 +5,6 @@ import {ShoppingListService} from '../shopping-list/ShoppingList.service';
 
 @Injectable()
 export class RecipeService {
-  recipeSelectEmitter = new EventEmitter<Recipe>()
   private recipes = [
     new Recipe('A Test Recipe', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
       [new Ingredient('xxx', 2), new Ingredient('aa', 2)]),
